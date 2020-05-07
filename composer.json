@@ -1,0 +1,33 @@
+{
+    "name": "elementareteilchen/upgrader",
+    "description": "Run upgrade wizards for multiple TYPO3 versions at once",
+    "type": "typo3-cms-extension",
+    "homepage": "https://github.com/ElementareTeilchen/upgrader",
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "Franz Kugelmann",
+            "email": "franz.kugelmann@elementare-teilchen.de"
+        }
+    ],
+    "require": {
+        "php": ">=7.2, < 7.5",
+        "typo3/cms-core": "^10.4",
+        "helhum/typo3-console": "^6.2.1"
+    },
+    "replace": {
+        "typo3-ter/upgrader": "self.version"
+    },
+    "config": {
+        "vendor-dir": ".Build/vendor",
+        "bin-dir": ".Build/bin"
+    },
+    "extra": {
+        "typo3/cms": {
+            "extension-key": "upgrader",
+            "cms-package-dir": "{$vendor-dir}/typo3/cms",
+            "app-dir": ".Build",
+            "web-dir": ".Build/public"
+        }
+    }
+}
